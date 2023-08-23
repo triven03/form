@@ -19,7 +19,7 @@
         </div>
     <!-- <hr> -->
 
-        <form action="/form2.html" method="post" onsubmit="return checkForm()">
+        <form action="#" method="post" onsubmit="return checkForm()">
             <div class="mcq div">
                 <div class="title">
                     MCQ <b>*</b>
@@ -102,7 +102,7 @@
                     <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
                 </div>
             </div>
-            <div class="fileupload div">
+            <div class="fileupload div" id="fileuploadDiv">
                 <div class="title">
                     File Upload <b>*</b>
                 </div>
@@ -115,7 +115,7 @@
                         <!-- <span onclick="fileUpload(this)" title="file" id="filespan"> <i class="fa-solid fa-image imgred"></i>Add File </span><i class="fa-solid fa-x cross" onclick="clearFile()"></i> -->
                     </div>
                     
-                    <input type="file" id="file" name="file" style="display: none;" onchange="fileSelect(this,'filediv')" required>
+                    <input type="file" id="file" name="file" style="display: none;" onchange="fileSelect(this,'filediv')" >
                 </div>
                 <div class="warningRed" id="fileUpload">
                     <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
@@ -214,7 +214,7 @@
                     <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
                 </div>
             </div>
-            <div class="tickBoxGrid div">
+            <div class="tickBoxGrid div" id="tickBoxGridDiv">
                 <div class="title">
                     Tick Box Grid <b>*</b>
                 </div>
@@ -234,9 +234,9 @@
                             <label >Row 1</label>
                         </div>
                         <div class="col c2">
-                            <input type="checkbox" name="tickBoxGridR1" value="R1C1">
-                            <input type="checkbox" name="tickBoxGridR1" value="R1C2">
-                            <input type="checkbox" name="tickBoxGridR1" value="R1C3">
+                            <input type="checkbox" name="tickBoxGridR1" value="R1C1" class="tickBoxGridR1">
+                            <input type="checkbox" name="tickBoxGridR1" value="R1C2" class="tickBoxGridR1">
+                            <input type="checkbox" name="tickBoxGridR1" value="R1C3" class="tickBoxGridR1">
                         </div>
                     </div>
                     <div class="row r3">
@@ -244,9 +244,9 @@
                             <label >Row 2</label>
                         </div>
                         <div class="col c2">
-                            <input type="checkbox" name="tickBoxGridR2" value="R2C1">
-                            <input type="checkbox" name="tickBoxGridR2" value="R2C2">
-                            <input type="checkbox" name="tickBoxGridR2" value="R2C3">
+                            <input type="checkbox" name="tickBoxGridR2" value="R2C1" class="tickBoxGridR2">
+                            <input type="checkbox" name="tickBoxGridR2" value="R2C2" class="tickBoxGridR2">
+                            <input type="checkbox" name="tickBoxGridR2" value="R2C3" class="tickBoxGridR2">
                         </div>
                     </div>
                     <div class="row r4">
@@ -254,9 +254,9 @@
                             <label >Row 3</label>
                         </div>
                         <div class="col c2">
-                            <input type="checkbox" name="tickBoxGridR3" value="R3C1">
-                            <input type="checkbox" name="tickBoxGridR3" value="R3C2">
-                            <input type="checkbox" name="tickBoxGridR3" value="R3C3">
+                            <input type="checkbox" name="tickBoxGridR3" value="R3C1" class="tickBoxGridR3">
+                            <input type="checkbox" name="tickBoxGridR3" value="R3C2" class="tickBoxGridR3">
+                            <input type="checkbox" name="tickBoxGridR3" value="R3C3" class="tickBoxGridR3">
                         </div>
                     </div>
                 </div>
@@ -268,6 +268,7 @@
             
             <div class="btn">
                 <input type="submit" value="Submit">
+                <!-- <input type="button" value="check" onclick="checkDiv()"> -->
                 <input type="reset" value="Clear form" onclick="clearFile()">
             </div>
         </form>
