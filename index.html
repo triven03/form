@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="formMeadia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>
+                Assignment Task  
+            </h3>
+            <hr>
+            <p>* Indicates required question</p>
+        </div>
+    <!-- <hr> -->
+
+        <form action="/form2.html" method="post" onsubmit="return checkForm()">
+            <div class="mcq div">
+                <div class="title">
+                    MCQ <b>*</b>
+                </div>
+                <div class="inputField">
+                    <input type="radio" id="mcq1" name="mcq" value="Option 1" required>
+                    <label for="mcq1">Option 1</label>
+                </div>
+                <div class="inputField">
+                    <input type="radio" id="mcq2" name="mcq" value="Option 2">
+                    <label for="mcq2">Option 2</label>
+                </div>
+                <div class="inputField">
+                    <input type="radio" id="mcq3" name="mcq" value="Option 3">
+                    <label for="mcq3">Option 3</label>
+                </div> 
+                <div class="warningRed" id="mcq">
+                    <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
+                </div>   
+            </div>
+
+            <div class="checkbox div" id="checkBox1div">
+                <div class="title">
+                    Chckbox <b>*</b>
+                </div>
+                <div class="inputField">
+                    <input type="checkbox" id="check1" name="check" value="Option 1" class="checkBoxes">
+                    <label for="check1">Option 1</label>
+                </div>
+                <div class="inputField">
+                    <input type="checkbox" id="check2" name="check" value="Option 2" class="checkBoxes">
+                    <label for="check2">Option 2</label>
+                </div>
+                <div class="inputField">
+                    <input type="checkbox" id="check3" name="check" value="Option 3" class="checkBoxes">
+                    <label for="check3">Option 3</label>
+                </div>
+                <div class="warningRed" id="checkBox">
+                    <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
+                </div> 
+            </div>
+
+            <div class="shortans div">
+                <div class="title">
+                    Short Answer <b>*</b>
+                </div>
+                <div class="inputField">
+                    <input type="text" id="sort" name="shortans" placeholder="Your answer" required>
+                </div>
+                <div class="warningRed" id="shortAns">
+                    <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
+                </div>
+            </div>
+
+            <div class="para div">
+                <div class="title">
+                    ParaGraph <b>*</b>
+                </div>
+                <div class="inputField">
+                    <teXTarea placeholder="Your answer" id="para" name="paragraph" required></teXTarea>
+                </div>
+                <div class="warningRed" id="paraGraph">
+                    <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
+                </div>
+            </div>
+
+            <div class="dropdown div">
+                <div class="title">
+                    Drop Down <b>*</b>
+                </div>
+                <div class="inputField">
+                    <select name="option" id="option">
+                        <option value="" >Choose</option>
+                        <option value="Option 1">Option 1</option>
+                        <option value="Option 2">Option 2</option>
+                        <option value="Option 3">Option 3</option>
+                    </select>
+                </div>
+                <div class="warningRed" id="dropDown">
+                    <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
+                </div>
+            </div>
+            <div class="fileupload div">
+                <div class="title">
+                    File Upload <b>*</b>
+                </div>
+                <div class="inputField">
+                    
+                    <div class="filediv" id="filediv">
+
+                        <span class="filespan" onclick="fileUpload('file')" title="file" id="filespan"> <i class="fa-sharp fa-solid fa-arrow-up-from-bracket"></i>Add File</span>
+
+                        <!-- <span onclick="fileUpload(this)" title="file" id="filespan"> <i class="fa-solid fa-image imgred"></i>Add File </span><i class="fa-solid fa-x cross" onclick="clearFile()"></i> -->
+                    </div>
+                    
+                    <input type="file" id="file" name="file" style="display: none;" onchange="fileSelect(this,'filediv')" required>
+                </div>
+                <div class="warningRed" id="fileUpload">
+                    <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
+                </div>
+            </div>
+            <div class="leniarscale div">
+                <div class="title">
+                    Linear Scale <b>*</b>
+                </div>
+                <div class="flexLeniar">
+                    <div class="divTitle">
+                        <div></div>
+                        <div>Worst</div>
+                    </div>
+                    <div class="ldivOption">
+                        
+                        <div>
+                            <label for="lc1">1</label>
+                            <input type="radio" name="scale" id="lc1" required>
+                        </div>
+                        <div>
+                            <label for="lc2">2</label>
+                            <input type="radio" name="scale" id="lc2">
+                        </div>
+                        <div>
+                            <label for="lc3">3</label>
+                            <input type="radio" name="scale" id="lc3">
+                        </div>
+                        <div>
+                            <label for="lc4">4</label>
+                            <input type="radio" name="scale" id="lc4">
+                        </div>
+                        <div>
+                            <label for="lc5">5</label>
+                            <input type="radio" name="scale" id="lc5">
+                        </div>
+                    </div>
+                    <div class="divTitle">
+                        <span></span>
+                        <span>Best</span>
+                    </div>
+                </div>
+               
+                <div class="warningRed" id="leniarScale">
+                    <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
+                </div>
+            </div>
+            <div class="multiChoiceGrid div">
+                <div class="title">
+                    Multi Choice <b>*</b>
+                </div>
+                <div class="gridBox">
+                    <div class="row r1">
+                        <div class="col c1">
+                            <label ></label>
+                        </div>
+                        <div class="col c2">
+                            <label >Column 1</label>
+                            <label >Column 2</label>
+                            <label >Column 3</label>
+                        </div>
+                    </div>
+                    <div class="row r2">
+                        <div class="col c1">
+                            <label >Row 1</label>
+                        </div>
+                        <div class="col c2">
+                            <input type="radio" name="multiChoiceGridR1" value="R1C1" required>
+                            <input type="radio" name="multiChoiceGridR1" value="R1C2">
+                            <input type="radio" name="multiChoiceGridR1" value="R1C3">
+                        </div>
+                    </div>
+                    <div class="row r3">
+                        <div class="col c1">
+                            <label >Row 2</label>
+                        </div>
+                        <div class="col c2">
+                            <input type="radio" name="multiChoiceGridR2" value="R2C1" required>
+                            <input type="radio" name="multiChoiceGridR2" value="R2C2">
+                            <input type="radio" name="multiChoiceGridR2" value="R2C3">
+                        </div>
+                    </div>
+                    <div class="row r4">
+                        <div class="col c1">
+                            <label >Row 3</label>
+                        </div>
+                        <div class="col c2">
+                            <input type="radio" name="multiChoiceGridR3" value="R3C1" required>
+                            <input type="radio" name="multiChoiceGridR3" value="R3C2">
+                            <input type="radio" name="multiChoiceGridR3" value="R3C3">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="warningRed" id="multiChoiceGrid">
+                    <p><i class="fa-solid fa-circle-exclamation"></i>This is a required question</p>
+                </div>
+            </div>
+            <div class="tickBoxGrid div">
+                <div class="title">
+                    Tick Box Grid <b>*</b>
+                </div>
+                <div class="gridBox">
+                    <div class="row r1">
+                        <div class="col c1">
+                            <label ></label>
+                        </div>
+                        <div class="col c2">
+                            <label >Column 1</label>
+                            <label >Column 2</label>
+                            <label >Column 3</label>
+                        </div>
+                    </div>
+                    <div class="row r2">
+                        <div class="col c1">
+                            <label >Row 1</label>
+                        </div>
+                        <div class="col c2">
+                            <input type="checkbox" name="tickBoxGridR1" value="R1C1">
+                            <input type="checkbox" name="tickBoxGridR1" value="R1C2">
+                            <input type="checkbox" name="tickBoxGridR1" value="R1C3">
+                        </div>
+                    </div>
+                    <div class="row r3">
+                        <div class="col c1">
+                            <label >Row 2</label>
+                        </div>
+                        <div class="col c2">
+                            <input type="checkbox" name="tickBoxGridR2" value="R2C1">
+                            <input type="checkbox" name="tickBoxGridR2" value="R2C2">
+                            <input type="checkbox" name="tickBoxGridR2" value="R2C3">
+                        </div>
+                    </div>
+                    <div class="row r4">
+                        <div class="col c1">
+                            <label >Row 3</label>
+                        </div>
+                        <div class="col c2">
+                            <input type="checkbox" name="tickBoxGridR3" value="R3C1">
+                            <input type="checkbox" name="tickBoxGridR3" value="R3C2">
+                            <input type="checkbox" name="tickBoxGridR3" value="R3C3">
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="warningRed" id="tickBoxGrid">
+                    <p><i class="fa-solid fa-circle-exclamation"></i>This question requires at least one response per row</p>
+                </div>
+            </div>
+            
+            <div class="btn">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear form" onclick="clearFile()">
+            </div>
+        </form>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
